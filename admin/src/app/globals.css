@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #070709;
+    --foreground: #f3f4f6;
+    --card: #0e0e13;
+    --card-hover: #15151e;
+    --border: #22222e;
+    --primary: #f59e0b;
+    --secondary: #ef4444;
+  }
+
+  * {
+    border-color: #22222e;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #070709;
+    color: #f3f4f6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #09090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #252533;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+.code-glow {
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.box-glow {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.15);
+}
+
+@keyframes terminalBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background-color: #f59e0b;
+  vertical-align: middle;
+  animation: terminalBlink 1s infinite;
+}

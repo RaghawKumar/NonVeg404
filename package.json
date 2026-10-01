@@ -1,0 +1,15 @@
+{
+  "name": "nonveg404-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NON VEG 404 Restaurant Workspace - Website & Dedicated Admin Portal",
+  "scripts": {
+    "dev:website": "npm --prefix website run dev -- -p 3000",
+    "dev:admin": "npm --prefix admin run dev -- -p 3001",
+    "dev:backend": "npm --prefix backend run dev",
+    "start:backend": "npm --prefix backend run start",
+    "app:run": "cd app && flutter run",
+    "build:website": "npm --prefix website run build",
+    "build:admin": "npm --prefix admin run build"
+  }
+}
